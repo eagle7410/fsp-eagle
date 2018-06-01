@@ -15,7 +15,7 @@ viod async function doit () {
 	await fsp.mustdir(PATH_TEST);
 
 	const content = await fsp.readFile(`${__dirname}/README.md`);
-	await fsp.writeFile(`${PATH_TEST}/test/README.md`, content);
+	await fsp.writeFile(`${PATH_TEST}/README.md`, content);
 
 }
 ```
