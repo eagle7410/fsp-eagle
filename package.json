@@ -1,6 +1,6 @@
 {
-  "name": "jszipper",
-  "version": "1.0.0",
+  "name": "fsp-eagle",
+  "version": "1.0.1",
   "description": "wrapper for https://stuk.github.io/jszip/",
   "main": "index.js",
   "scripts": {
