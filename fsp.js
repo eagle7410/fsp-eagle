@@ -110,7 +110,7 @@ for (let prop of Object.keys(fs)) {
  *
  * @param {string} dirPath
  *
- * @return {Promise<void>}
+ * @return {Promise<boolean>}
  */
 fileSystemPromises.mustdir = async function(dirPath) {
 

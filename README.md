@@ -1,49 +1,53 @@
 # fsp-eagle
 Wrapper for node fs. Use promisify. and extend him.
 ---
+## install
+```bash
+npm i fsp-eagle --save
+``
+
 Example use:
 ```node
+const fsp = require('fsp-eagle');
+const PATH_TEST = `${__dirname}/tets`;
+
+viod async function doit () {
+	await fsp.mustdir(PATH_TEST);
+
+	const content = await fsp.readFile(`${__dirname}/README.md`);
+	await fsp.writeFile(`${PATH_TEST}/test/README.md`, content);
+
+}
 ```
+## Version
+1.0.0 - base.
 
-<a name="fileSystemPromises"></a>
+## Extends
+[Extends description](https://github.com/eagle7410/fsp-eagle/blob/master/ext.md)
 
-## fileSystemPromises : <code>Object</code>
-**Kind**: global constant
+## People
+Developer [Igor Stcherbina](https://github.com/eagle7410)
 
-* [fileSystemPromises](#fileSystemPromises) : <code>Object</code>
-    * [.mustdir(dirPath)](#fileSystemPromises.mustdir) ⇒ <code>Promise.&lt;void&gt;</code>
-    * [.mvdir(dirPath)](#fileSystemPromises.mvdir) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.mvfile(dirFile)](#fileSystemPromises.mvfile) ⇒ <code>Promise.&lt;boolean&gt;</code>
+## License
 
-<a name="fileSystemPromises.mustdir"></a>
+MIT License
 
-### fileSystemPromises.mustdir(dirPath) ⇒ <code>Promise.&lt;void&gt;</code>
-Crete path if not exists.
+Copyright (c) 2018 [Igor Stcherbina](https://github.com/eagle7410)
 
-**Kind**: static method of [<code>fileSystemPromises</code>](#fileSystemPromises)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-| Param | Type |
-| --- | --- |
-| dirPath | <code>string</code> |
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-<a name="fileSystemPromises.mvdir"></a>
-
-### fileSystemPromises.mvdir(dirPath) ⇒ <code>Promise.&lt;boolean&gt;</code>
-Remove directory. If directory not empty remove content and folder
-
-**Kind**: static method of [<code>fileSystemPromises</code>](#fileSystemPromises)
-
-| Param | Type |
-| --- | --- |
-| dirPath | <code>boolean</code> |
-
-<a name="fileSystemPromises.mvfile"></a>
-
-### fileSystemPromises.mvfile(dirFile) ⇒ <code>Promise.&lt;boolean&gt;</code>
-Remove file. If file not exists return true.
-
-**Kind**: static method of [<code>fileSystemPromises</code>](#fileSystemPromises)
-
-| Param | Type |
-| --- | --- |
-| dirFile | <code>string</code> |
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
