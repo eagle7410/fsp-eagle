@@ -6,7 +6,7 @@
 * [fileSystemPromises](#fileSystemPromises) : <code>Object</code>
     * [.mustdir(dirPath)](#fileSystemPromises.mustdir) ⇒ <code>Promise.&lt;boolean&gt;</code>
     * [.mvdir(dirPath)](#fileSystemPromises.mvdir) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.mvfile(dirFile)](#fileSystemPromises.mvfile) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.mvfile(pathFile)](#fileSystemPromises.mvfile) ⇒ <code>Promise.&lt;boolean&gt;</code>
 
 <a name="fileSystemPromises.mustdir"></a>
 
@@ -32,12 +32,12 @@ Remove directory. If directory not empty remove content and folder
 
 <a name="fileSystemPromises.mvfile"></a>
 
-### fileSystemPromises.mvfile(dirFile) ⇒ <code>Promise.&lt;boolean&gt;</code>
+### fileSystemPromises.mvfile(pathFile) ⇒ <code>Promise.&lt;boolean&gt;</code>
 Remove file. If file not exists return true.
 
 **Kind**: static method of [<code>fileSystemPromises</code>](#fileSystemPromises)  
 
 | Param | Type |
 | --- | --- |
-| dirFile | <code>string</code> | 
+| pathFile | <code>string</code> | 
 

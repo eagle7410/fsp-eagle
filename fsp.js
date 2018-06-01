@@ -166,17 +166,17 @@ fileSystemPromises.mvdir = async function(dirPath) {
 /**
  * Remove file. If file not exists return true.
  *
- * @param {string} dirFile
+ * @param {string} pathFile
  *
  * @return {Promise<boolean>}
  */
-fileSystemPromises.mvfile = async function(dirFile) {
-	if (!await this.exists(dirFile)) return true;
+fileSystemPromises.mvfile = async function(pathFile) {
+	if (!await this.exists(pathFile)) return true;
 
-	if (!(await this.stat(dirFile)).isFile())
-		throw new Error(`Path ${dirFile} not file`);
+	if (!(await this.stat(pathFile)).isFile())
+		throw new Error(`Path ${pathFile} not file`);
 
-	await this.unlink(dirFile);
+	await this.unlink(pathFile);
 
 	return true;
 };
