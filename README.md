@@ -4,7 +4,7 @@ Wrapper for node fs. Use promisify. and extend him.
 ## install
 ```bash
 npm i fsp-eagle --save
-``
+```
 
 Example use:
 ```node
